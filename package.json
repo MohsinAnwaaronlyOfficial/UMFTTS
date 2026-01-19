@@ -1,0 +1,29 @@
+{
+  "name": "umf-tts",
+  "version": "1.0.0",
+  "description": "UMF TTS - Professional Text-to-Speech Desktop Application with ElevenLabs Integration",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"pnpm --filter @umf-tts/ui dev\" \"wait-on http://localhost:5173 && pnpm --filter @umf-tts/desktop dev\"",
+    "build": "pnpm -r build",
+    "build:ui": "pnpm --filter @umf-tts/ui build",
+    "build:desktop": "pnpm --filter @umf-tts/desktop build",
+    "dist": "pnpm build && pnpm --filter @umf-tts/desktop dist",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "clean": "rimraf node_modules apps/*/node_modules packages/*/node_modules apps/*/dist packages/*/dist"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "rimraf": "^5.0.5",
+    "typescript": "^5.3.3",
+    "wait-on": "^7.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "packageManager": "pnpm@8.14.0"
+}

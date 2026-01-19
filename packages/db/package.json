@@ -1,0 +1,32 @@
+{
+  "name": "@umf-tts/db",
+  "version": "1.0.0",
+  "description": "SQLite database layer for UMF TTS",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@umf-tts/shared": "workspace:*",
+    "better-sqlite3": "^9.2.2",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.8",
+    "@types/uuid": "^9.0.7",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  }
+}

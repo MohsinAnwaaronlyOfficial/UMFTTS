@@ -1,0 +1,57 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Build outputs
+dist/
+out/
+build/
+*.tsbuildinfo
+
+# Electron
+release/
+*.exe
+*.dmg
+*.AppImage
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Test coverage
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# SQLite databases (user data)
+*.sqlite
+*.sqlite3
+*.db
+
+# Generated audio files
+*.mp3
+*.wav
+!test/fixtures/**/*.mp3
+!test/fixtures/**/*.wav
