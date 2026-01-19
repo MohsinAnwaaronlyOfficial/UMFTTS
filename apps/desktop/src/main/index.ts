@@ -36,8 +36,9 @@ function createWindow(): void {
   });
 
   // Load the UI
-  if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
-    mainWindow.loadURL(process.env['ELECTRON_RENDERER_URL']);
+  if (is.dev) {
+    // In development, load from the UI dev server
+    mainWindow.loadURL('http://localhost:5173');
   } else {
     mainWindow.loadFile(path.join(__dirname, '../renderer/index.html'));
   }
