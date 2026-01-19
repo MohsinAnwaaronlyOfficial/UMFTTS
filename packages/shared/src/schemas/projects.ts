@@ -1,5 +1,4 @@
 import { z } from 'zod';
-import { ParsedLineSchema } from './parser.js';
 
 export const ProjectStatusSchema = z.enum(['draft', 'processing', 'completed', 'failed']);
 export type ProjectStatus = z.infer<typeof ProjectStatusSchema>;

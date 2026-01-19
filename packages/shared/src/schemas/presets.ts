@@ -1,5 +1,4 @@
 import { z } from 'zod';
-import { VoiceSettingsSchema } from './settings.js';
 
 export const VoicePresetSchema = z.object({
   id: z.number().int().positive().optional(),

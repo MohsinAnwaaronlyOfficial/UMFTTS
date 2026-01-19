@@ -1,9 +1,4 @@
 import { z } from 'zod';
-import { AppSettingsSchema, AppSettingsUpdateSchema } from './settings.js';
-import { VoicePresetSchema, VoicePresetCreateSchema, VoicePresetUpdateSchema } from './presets.js';
-import { ProjectSchema, ProjectCreateSchema, ProjectUpdateSchema, ProjectLineSchema } from './projects.js';
-import { ParseInputSchema } from './parser.js';
-import { TTSRequestSchema, VoiceCloneRequestSchema, StreamingOptionsSchema } from './elevenlabs.js';
 
 // IPC Channel Names
 export const IPC_CHANNELS = {
