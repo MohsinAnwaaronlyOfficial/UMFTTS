@@ -101,7 +101,7 @@ export function generateSilence(durationMs: number, outputPath: string): Promise
 
 // Merge multiple audio clips with optional silence between them
 export async function mergeAudioClips(options: MergeOptions): Promise<MergeResult> {
-  const { clipPaths, outputPath, delayMs = 0, outputFormat = 'mp3' } = options;
+  const { clipPaths, outputPath, delayMs = 0 } = options;
 
   // Validate input files exist
   for (const clipPath of clipPaths) {
